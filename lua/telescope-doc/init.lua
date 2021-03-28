@@ -45,7 +45,7 @@ M.open = function()
 
     -- Launch telescope
     telescope.find_files({
-        prompt_title = "Select Documentation",
+        prompt_title = "Select Document",
         cwd = tbl.cwd,
 
         -- Handle file selection proccess
@@ -63,7 +63,7 @@ end
 M.open_path = function(tbl)
     -- Launch telescope
     telescope.find_files({
-        prompt_title = "Select Documentation",
+        prompt_title = "Select Document",
         cwd = tbl.cwd,
 
         -- Handle file selection proccess
