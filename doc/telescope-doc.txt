@@ -1,0 +1,96 @@
+*telescope-doc.txt*  A telescope powered plugin to search in your documents
+
+Author:         to268
+Licence:        MIT
+Homepage:       https://github.com/to268/telescope-doc
+
+==============================================================================
+CONTENTS                                                   *telescope-doc-contents*
+
+    1. Intro ................................ |telescope-doc-intro|
+    2. Usage ................................ |telescope-doc-usage|
+    3. License .............................. |telescope-doc-license|
+
+==============================================================================
+1. Intro                                                      *telescope-doc-intro*
+
+Telescope-doc is a telescope plugin to search and open documents files like
+pdf, html and text based documents. It's very handy when you have a ton of
+files and it's saves you a considerable amount of time.
+
+==============================================================================
+2. Usage                                                      *telescope-doc-usage*
+
+VimL:
+
+Use :call TelescopeDoc() to launch the plugin. To set the directory where to
+search files recursively use:
+>
+    let g:telescope_doc_path = ""
+<
+If you want to set viewers (program to preview pdf and html files) manually
+use:
+>
+    let g:telescope_doc_pdf_viewer = ""
+    let g:telescope_doc_html_viewer = ""
+<
+
+If you want to fork the viewer process or open others files differently in
+neovim use:
+>
+    " Values: false, true
+    let g:telescope_fork_process = "true"
+    " Values: edit, split, vsplit, tab
+    let g:telescope_open_mode = "vsplit"
+<
+
+Lua:
+
+Use this function to launch the plugin in the lua language.
+
+telescope-doc.open_file({opts})                                    *telescope-doc.open_file()*
+    Open telescope-doc.
+
+
+    Valid keys for {opts}
+
+
+    cwd: ~
+        Directory where to search files
+
+            Default: ''
+
+    pdf_viewer: ~
+        External program to display pdf files.
+
+            Default: '$READER' or 'zathura' or ''
+
+    html_viewer: ~
+        External program to display html files.
+
+            Default: 'xdg-open' or ''
+
+    fork_process: ~
+        Whether the program is forked with setsid.
+
+            Default: true
+
+    open_mode: ~
+        Determines how others files are opened in neovim.
+
+            Available options are:
+            - "edit"
+            - "split"
+            - "vsplit" (default)
+            - "tab"
+
+    Parameters: ~
+        {opts} (table)  Configuration opts.
+
+
+==============================================================================
+4. License                                                  *telescope-doc-license*
+
+MIT
+
+ vim:tw=78:ts=8:ft=help:norl:
