@@ -53,7 +53,7 @@ nnoremap <silent><leader>d <cmd>call TelescopeDoc()<CR>
 This is a sample configuration in lua
 
 ```lua
-require("telescope-doc.nvim").open_file({
+require("telescope-doc").open_path({
     -- Base directory (default : project root)
     cwd = "$HOME/Documents/",
     -- Pdf viewer (default : "$READER" or "zathura" or "")

@@ -48,7 +48,7 @@ Lua:
 
 Use this function to launch the plugin in the lua language.
 
-telescope-doc.open_file({opts})                                    *telescope-doc.open_file()*
+telescope-doc.open_path({opts})                                    *telescope-doc.open_path()*
     Open telescope-doc.
 
 
