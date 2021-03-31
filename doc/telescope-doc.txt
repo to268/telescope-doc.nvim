@@ -2,7 +2,7 @@
 
 Author:         to268
 Licence:        MIT
-Homepage:       https://github.com/to268/telescope-doc
+Homepage:       https://github.com/to268/telescope-doc.nvim
 
 ==============================================================================
 CONTENTS                                                   *telescope-doc-contents*
@@ -89,7 +89,7 @@ telescope-doc.open_path({opts})                                    *telescope-do
 
 
 ==============================================================================
-4. License                                                  *telescope-doc-license*
+3. License                                                  *telescope-doc-license*
 
 MIT
 
