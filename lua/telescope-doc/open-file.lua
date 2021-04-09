@@ -1,4 +1,5 @@
 local actions = require("telescope.actions")
+local Job = require("plenary.job")
 local vim = vim
 
 local M = {}
@@ -59,9 +60,15 @@ M.show = function(tbl)
 
         -- Execute the command whether fork_process is false or not
         if tbl.fork_process == false then
-            vim.fn.system(tbl.html_viewer .. " \"" .. filename .. "\"")
+            Job:new({
+                command = tbl.html_viewer,
+                args = { filename },
+            }):start()
         else
-            vim.fn.system("setsid -f " .. tbl.html_viewer .. " \"" .. filename .. "\"")
+            Job:new({
+                command = "setsid -f" .. tbl.html_viewer,
+                args = { filename },
+            }):start()
         end
         return 0
     elseif extension == ".pdf" then
@@ -70,10 +77,17 @@ M.show = function(tbl)
 
         -- Execute the command whether fork_process is false or not
         if tbl.fork_process == false then
-            vim.fn.system(tbl.pdf_viewer .. " \"" .. filename .. "\"")
+            Job:new({
+                command = tbl.pdf_viewer,
+                args = { filename },
+            }):start()
         else
-            vim.fn.system("setsid -f " .. tbl.pdf_viewer .. " \"" .. filename .. "\"")
+            Job:new({
+                command = "setsid -f" .. tbl.pdf_viewer,
+                args = { filename },
+            }):start()
         end
+
         return 1
     else
         -- Open the file with the right mode
