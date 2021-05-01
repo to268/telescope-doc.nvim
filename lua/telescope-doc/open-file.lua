@@ -66,7 +66,7 @@ M.show = function(tbl)
             }):start()
         else
             Job:new({
-                command = "setsid -f" .. tbl.html_viewer,
+                command = "setsid -f " .. tbl.html_viewer,
                 args = { filename },
             }):start()
         end
@@ -83,7 +83,7 @@ M.show = function(tbl)
             }):start()
         else
             Job:new({
-                command = "setsid -f" .. tbl.pdf_viewer,
+                command = "setsid -f " .. tbl.pdf_viewer,
                 args = { filename },
             }):start()
         end
