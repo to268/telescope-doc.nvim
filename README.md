@@ -15,7 +15,6 @@ Plug 'to268/telescope-doc.nvim'
 " Requirements
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
 ```
 
 Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
@@ -23,7 +22,7 @@ Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
 ```lua
 use {
   'to268/telescope-doc.nvim',
-  requires = {{'nvim-telescope/telescope.nvim'}, {'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+  requires = {{'nvim-telescope/telescope.nvim'}, {'nvim-lua/popup.nvim'}}
 }
 ```
 
