@@ -3,7 +3,7 @@
 A plugin powered by [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) to find the document you want.
 Because find a pdf or a html document is long when you have a ton of them.
 
-[Neovim Nightly (0.5)](https://github.com/neovim/neovim/releases/tag/nightly) is required to use this plugin.
+Neovim >= 0.5 is required to use this plugin.
 
 ## Installation
 

@@ -1,7 +1,7 @@
 *telescope-doc.txt*  A telescope powered plugin to search in your documents
 
 Author:         to268
-Licence:        MIT
+Licence:        GPL v3.0
 Homepage:       https://github.com/to268/telescope-doc.nvim
 
 ==============================================================================
