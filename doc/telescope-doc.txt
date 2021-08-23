@@ -91,6 +91,6 @@ telescope-doc.open_path({opts})                                    *telescope-do
 ==============================================================================
 3. License                                                  *telescope-doc-license*
 
-MIT
+GPL v3.0
 
  vim:tw=78:ts=8:ft=help:norl:
