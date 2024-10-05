@@ -63,6 +63,7 @@ M.open = function()
     telescope.find_files({
         prompt_title = "Select Document",
         cwd = tbl.cwd,
+        follow = true,
 
         -- Handle file selection proccess
         attach_mappings = function(prompt_bufnr, map)
@@ -81,6 +82,7 @@ M.open_path = function(tbl)
     telescope.find_files({
         prompt_title = "Select Document",
         cwd = tbl.cwd,
+        follow = true,
 
         -- Handle file selection proccess
         attach_mappings = function(prompt_bufnr, map)
