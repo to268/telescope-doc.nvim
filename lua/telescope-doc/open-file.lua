@@ -62,7 +62,7 @@ end
 --]]
 M.show = function(tbl)
     -- Get filename with his path and his extension
-    local filename = tbl.file.cwd .. tbl.file.value
+    local filename = tbl.file.cwd .. "/" .. tbl.file.value
     local extension = filename:match("^.+(%..+)$")
 
     -- Initialize viewers
