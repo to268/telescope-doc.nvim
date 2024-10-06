@@ -28,10 +28,10 @@ use {
 
 ## Usage
 
-This is a sample configuration in viml
+This is a sample call in viml
 
 ```viml
-" Base directory (default : project root)
+" Base directory (default : project root), with trailing separator
 let g:telescope_doc_path = "$HOME/Documents/"
 " Pdf viewer (default : $READER or zathura or empty)
 let g:telescope_doc_pdf_viewer = "$READER"
@@ -49,11 +49,11 @@ let g:telescope_doc_open_mode = ""
 nnoremap <silent><leader>d <cmd>call TelescopeDoc()<CR>
 ```
 
-This is a sample configuration in lua
+This is a sample call in lua
 
 ```lua
 require("telescope-doc").open_path({
-    -- Base directory (default : project root)
+    -- Base directory (default : project root), with trailing separator
     cwd = "$HOME/Documents/",
     -- Pdf viewer (default : "$READER" or "zathura" or "")
     pdf_viewer = "$READER",
@@ -67,6 +67,18 @@ require("telescope-doc").open_path({
     -- (available: "edit", "split", "vsplit", "tab")
     open_mode = "vsplit"
 })
+```
+
+## Notes for macOS
+
+To be able to use `fork_process=true` on macOS, it is necessary to install `setsid`, which is not part of the OS.
+Homebrew users can install it with `brew install utils-linux`.
+Because `utils-linux` is not linked by default, make sure `setsid` appears on your `PATH`.
+For instance, create a symbolic link using `ln -s /opt/homebrew/opt/utils-linux/bin/setsid ~/.local/bin`.
+
+An example call on macOS might look like
+```
+:lua require("telescope-doc").open_path({ cwd="$HOME/Documents/", pdf_viewer="open -a Skim", fork_process = true })
 ```
 
 ## Help
